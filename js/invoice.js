@@ -1,6 +1,6 @@
 
-import { newItemFormHandler, printerHandler, recordFormHandler } from "./app/handlers";
-import { newItemForm, printer, recordForm } from "./app/selectors";
+import { inventoryBtnHandler, newItemFormHandler, printerHandler, recordFormHandler } from "./app/handlers";
+import { inventoryBtn, newItemForm, printer, recordForm } from "./app/selectors";
 import { productItemRender, productOptionRender } from "./products";
 import { recordObserver } from "./record";
 
@@ -15,10 +15,10 @@ export default class Invoice {
     recordForm.addEventListener("submit", recordFormHandler);
     newItemForm.addEventListener("submit", newItemFormHandler);
     printer.addEventListener("click",printerHandler)
+    inventoryBtn.addEventListener("click",inventoryBtnHandler)
   }
 
   init() {
-    console.log("Invoice App Start");
 
     this.initialRender();
 
